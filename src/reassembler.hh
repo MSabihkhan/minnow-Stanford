@@ -1,12 +1,16 @@
 #pragma once
-
 #include "byte_stream.hh"
+using namespace std;
+#include<map>
 
 class Reassembler
 {
 public:
+  uint64_t next_index;
+  uint64_t last_index;
+  map< uint64_t , string>buffer;
   // Construct Reassembler to write into given ByteStream.
-  explicit Reassembler( ByteStream&& output ) : output_( std::move( output ) ) {}
+  explicit Reassembler( ByteStream&& output ) : next_index(0),last_index(0),buffer(), output_( std::move( output ) ){}
 
   /*
    * Insert a new substring to be reassembled into a ByteStream.
