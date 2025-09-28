@@ -23,7 +23,7 @@ public:
 protected:
   uint64_t capacity_;
   std::string buffer;
-  bool state; // this can be for close or for finished 
+  bool state; // this can be for close or for finished
   uint64_t bytes_Pushed;
   uint64_t bytes_Poped;
   bool error_ {};

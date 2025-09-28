@@ -2,14 +2,14 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <string>
 #include <span>
+#include <string>
 using namespace std;
 
 void get_URL( const string& host, const string& path )
 {
   TCPSocket socket;
-  socket.connect( Address( host, "http" ) ); 
+  socket.connect( Address( host, "http" ) );
   string request = "GET " + path + " HTTP/1.1\r\n";
   request += "Host: " + host + "\r\n";
   request += "Connection: close\r\n";
@@ -17,13 +17,13 @@ void get_URL( const string& host, const string& path )
 
   socket.write( request );
   string buffer;
-    while (!socket.eof()) {
-        socket.read(buffer);
-        if (!buffer.empty()) {
-            cout << buffer;
-            buffer.clear();
-        }
+  while ( !socket.eof() ) {
+    socket.read( buffer );
+    if ( !buffer.empty() ) {
+      cout << buffer;
+      buffer.clear();
     }
+  }
   socket.close();
   // cerr << "Function called: get_URL(" << host << ", " << path << ")\n";
   // cerr << "Warning: get_URL() has not been implemented yet.\n";
