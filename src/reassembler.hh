@@ -11,7 +11,6 @@ public:
   map< uint64_t , string>buffer;
   // Construct Reassembler to write into given ByteStream.
   explicit Reassembler( ByteStream&& output ) : next_index(0),last_index(0),buffer(), output_( std::move( output ) ){}
-
   /*
    * Insert a new substring to be reassembled into a ByteStream.
    *   `first_index`: the index of the first byte of the substring
