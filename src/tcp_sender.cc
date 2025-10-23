@@ -7,15 +7,15 @@ using namespace std;
 // This function is for testing only; don't add extra state to support it.
 uint64_t TCPSender::sequence_numbers_in_flight() const
 {
-  debug( "unimplemented sequence_numbers_in_flight() called" );
-  return {};
+  
+  return inflight;
 }
 
 // This function is for testing only; don't add extra state to support it.
 uint64_t TCPSender::consecutive_retransmissions() const
 {
-  debug( "unimplemented consecutive_retransmissions() called" );
-  return {};
+  
+  return consecutive_retransmitions;
 }
 
 void TCPSender::push( const TransmitFunction& transmit )
