@@ -1,15 +1,15 @@
 Checkpoint 3 Writeup
 ====================
 
-My name: [your name here]
+My name: Sabih ud din khan
 
-My SUNet ID: [your sunetid here]
+My SUNet ID: 23L-0654
 
-I collaborated with: [list sunetids here]
+I collaborated with: Aammar Noor Zia 23L-0558
 
 I would like to thank/reward these classmates for their help: [list sunetids here]
 
-This checkpoint took me about [n] hours to do. I [did/did not] attend the lab session.
+This checkpoint took me about 5-6 hours to do. I [did/did not] attend the lab session.
 
 Program Structure and Design of the TCPSender [Describe data
 structures and approach taken. Describe alternative designs considered
