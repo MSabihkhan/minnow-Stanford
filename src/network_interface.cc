@@ -7,7 +7,7 @@
 
 using namespace std;
 
-//! \param[in] ethernet_address Ethernet (what ARP calls "hardware") address of the interface
+//! \param[in] ethernet_address Ethernet (what ARP calls "hardware")   address of the interface
 //! \param[in] ip_address IP (what ARP calls "protocol") address of the interface
 NetworkInterface::NetworkInterface( string_view name,
                                     shared_ptr<OutputPort> port,
