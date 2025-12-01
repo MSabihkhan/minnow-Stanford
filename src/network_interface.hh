@@ -4,8 +4,12 @@
 #include "ethernet_frame.hh"
 #include "ipv4_datagram.hh"
 
+#include <iostream>
 #include <memory>
 #include <queue>
+#include <unordered_map>
+#include <vector>
+using namespace std;
 
 // A "network interface" that connects IP (the internet layer, or network layer)
 // with Ethernet (the network access layer, or link layer).
@@ -82,4 +86,18 @@ private:
 
   // Datagrams that have been received
   std::queue<InternetDatagram> datagrams_received_ {};
+  size_t current_time{ 0 };
+  struct ArpEntry
+  {
+    EthernetAddress eth_addr;
+    size_t expiration;
+  };
+  //Using Unordered map because we need speed as it is faster than ordered map
+  unordered_map<uint32_t, ArpEntry> arp_table {};
+  unordered_map<uint32_t, size_t> waiting_arp_requests{};
+  unordered_map<uint32_t, vector<InternetDatagram>> waiting_dgrams{};
+
+  // Constants per spec
+  static constexpr size_t ARP_TTL_MS = 30000;            //[cite_start]// 30 seconds [cite: 100]
+  static constexpr size_t ARP_REQUEST_TIMEOUT_MS = 5000; //[cite_start]// 5 seconds [cite: 94]
 };
