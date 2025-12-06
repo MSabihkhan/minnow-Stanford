@@ -1,35 +1,28 @@
 Checkpoint 7 Writeup
 ====================
 
-My name: [your name here]
+My name: Muhammad Sabih ud din khan
 
-My SUNet ID: [your sunetid here]
+My SUNet ID: 23L-0654
 
-I collaborated with: [list sunetids here]
+I collaborated with: Ammar Noor Zia 23L-0558
 
-I would like to thank/reward these classmates for their help: [list sunetids here]
+I would like to thank/reward these classmates for their help: Subaina Munib 23L-0778
 
-This checkpoint took me about [n] hours to do. I [did/did not] attend the lab session.
+This checkpoint took me about 2.5 hours to do. I [did] attend the lab session.
 
 Solo portion:
+Yes, my implementation successfully started and ended a conversation with another copy of itself.
+I ran the server on port 4000 and the client on 4001, and text typed in one window appeared in the other.
 
-- Did your implementation successfully start and end a conversation with another copy of itself? [y/n]
-
-- Did it successfully transfer a one-megabyte file, with contents identical upon receipt? [y/n]
-
-- Please describe what code changes, if any, were necessary to pass these steps:
-
+Yes, it successfully transferred a one-megabyte file.
+I compared the SHA256 checksums of the sent file and the received file, and they were identical.
 Group portion:
 
-- Who is your lab partner (and what is their SUNet ID, e.g. "winstein"?
+Partner: Subaina Munib
+SUNet ID:  23L-0778
 
-- Did your implementations successfully start and end a conversation with each other (with each implementation acting as ``client'' or as ``server'')?
-
-- Did you successfully transfer a one-megabyte file between your two
-  implementations, with contents identical upon receipt?
-
-- Please describe what code changes, if any, were necessary to pass
-  these steps, either by you or your lab partner.
+We successfully connected client-to-server and transferred the file.
 
 Creative portion (if you did anything for our creative challenge,
                   please boast about it!)
